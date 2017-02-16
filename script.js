@@ -25,13 +25,13 @@ var groceryList = [item1, item2, item3];
 var total=0;
 
 for(var i=0 ; i < groceryList.length ; i++) {
-  console.log(groceryList[i].name + " " + groceryList[i].price);
+(groceryList[i].name + " " + groceryList[i].price);
 var printedList=document.createElement("div");
 printedList.innerHTML = groceryList[i].name + " " + groceryList[i].price;
 total+= groceryList[i].price;
 document.body.appendChild(printedList);
-
 };
-var printedTotal= document.createElement("div");
-printedTotal.innerhtml= total;
+
+var printedTotal= document.createElement("p");
+printedTotal.innerHTML= total;
 document.body.appendChild(printedTotal);
