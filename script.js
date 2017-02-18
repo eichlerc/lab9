@@ -24,6 +24,7 @@ var groceryList = [item1, item2, item3];
 
 var total=0;
 
+function showList() {
 for(var i=0 ; i < groceryList.length ; i++) {
 (groceryList[i].name + " " + groceryList[i].price);
 var printedList=document.createElement("div");
@@ -35,3 +36,13 @@ document.body.appendChild(printedList);
 var printedTotal= document.createElement("p");
 printedTotal.innerHTML= total;
 document.body.appendChild(printedTotal);
+}
+
+function addItems(){
+  var a = document.getElementById('a').value;
+  var b = document.getElementById('b').value*1;
+  var newItems = {name: a, price: b};
+  if (a !=''){
+    groceryList.push(newItems)}
+    showList();
+  }
