@@ -26,15 +26,15 @@ var total=0;
 
 function showList() {
 for(var i=0 ; i < groceryList.length ; i++) {
-(groceryList[i].name + " " + groceryList[i].price);
+// (groceryList[i].name + " " + groceryList[i].price);
 var printedList=document.createElement("div");
-printedList.innerHTML = groceryList[i].name + " " + groceryList[i].price;
+printedList.textContent = groceryList[i].name + " " + groceryList[i].price;
 total+= groceryList[i].price;
 document.body.appendChild(printedList);
 };
 
-var printedTotal= document.createElement("p");
-printedTotal.innerHTML= total;
+var printedTotal= document.createElement("div");
+printedTotal.textContent = total;
 document.body.appendChild(printedTotal);
 }
 
